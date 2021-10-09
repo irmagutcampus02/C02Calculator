@@ -11,7 +11,7 @@ public class Calculator {
 
         // Speichere das Ergebnis aus "subtract" in die Variable "subtractResult"
         int subtractResult = subtract(a, b);
-        printResult(subtractResult);
+        //printResult(subtractResult);
 
         // Speichere das Ergebnis aus "multiply" in die Variable "result"
         int result = multiply(a, b);
@@ -23,6 +23,7 @@ public class Calculator {
 
         // Rufe die Methode "modulo" auf und übergebe das Resultat direkt der Methode "printResult"
         printResult(modulo(a, b));
+        printResult(subtractResult);
     }
 
     /**
@@ -32,7 +33,10 @@ public class Calculator {
      * @return das Ergenis der Addition
      */
     public static int add(int a, int b) {
-        return a + b;
+        int erg;
+        erg = a +b;
+        return erg;
+        //return a + b;
     }
 
     /**
@@ -62,10 +66,12 @@ public class Calculator {
      * @return Das Ergebnis der Division
      */
     public static int divide(int dividend, int divisor) {
-        if (divisor == 0) {
-            return 0;
+        // führe die Berechnung nur aus, wenn der divisor ungleich 0 ist
+        if (divisor != 0) {
+            return dividend / divisor;
         }
-        return dividend / divisor;
+        // sonst liefere einfach 0 zurück
+        return 0;
     }
 
     /**
